@@ -1,7 +1,7 @@
 <template lang="eng">
   <section class="grid">
     <figure aspect-ratio="16x9" class="rounded shadow filter">
-      <img :src="`https://strapi.syedmh.com/${image}`" :alt="title" width="16" height="9" />
+      <img :src="`${$config.API_BASE_URL}/${image}`" :alt="title" width="16" height="9" />
     </figure>
     <div class="flex">
       <nuxt-link class="category" :to="`/project-category/${categorySlug}`">{{ category }}::</nuxt-link>

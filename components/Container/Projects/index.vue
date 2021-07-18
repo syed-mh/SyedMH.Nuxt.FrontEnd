@@ -3,7 +3,7 @@
     <article v-for="project in projects" :key="project.id" class="left flex">
       <figure aspect-ratio="4x3" class="rounded shadow filter">
         <img
-          :src="`https://strapi.syedmh.com/${project.featuredImage.formats.small.url}`"
+          :src="`${$config.API_BASE_URL}/${project.featuredImage.formats.small.url}`"
           :alt="project.title"
         />
       </figure>
