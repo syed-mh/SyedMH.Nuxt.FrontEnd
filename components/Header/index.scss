@@ -1,0 +1,36 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--color--background);
+  background-image: url('@/assets/images/background-texture.png');
+  .boxed {
+    padding: 1rem 0;
+    & > a {
+      margin-right: auto;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    gap: 1.5rem;
+    li {
+      list-style: none;
+      a {
+        font-weight: var(--font-weight--bold);
+        color: var(--color--secondary);
+        text-shadow: var(--drop-shadow--secondary);
+        text-transform: lowercase;
+        transition: color var(--transition--250),
+          text-shadow var(--transition--250);
+        &.nuxt-link-active,
+        &:hover,
+        &:focus-visible {
+          color: var(--color--primary);
+          text-shadow: var(--drop-shadow--primary-500);
+        }
+      }
+    }
+  }
+}

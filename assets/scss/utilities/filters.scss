@@ -1,0 +1,23 @@
+.filter {
+  position: relative;
+  &::before,
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+  }
+  &::before {
+    background: var(--color--overlay-primary);
+    opacity: var(--opacity--overlay-primary);
+    mix-blend-mode: var(--blend--overlay-primary);
+    z-index: 1;
+  }
+  &::after {
+    background: var(--color--overlay-secondary);
+    opacity: var(--opacity--overlay-secondary);
+    mix-blend-mode: var(--blend--overlay-secondary);
+    z-index: 1;
+  }
+}

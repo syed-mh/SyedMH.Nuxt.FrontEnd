@@ -1,0 +1,28 @@
+section {
+  gap: 1rem;
+  @media (max-width: 840px) {
+    text-align: left;
+  }
+  .grid {
+    gap: 0.5rem;
+    @media (max-width: 840px) {
+      gap: 1rem;
+    }
+    @media (min-width: 841px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    &::v-deep figure {
+      @media (max-width: 840px) {
+        padding-top: 50%;
+      }
+    }
+  }
+  .primary-button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    @media (max-width: 841px) {
+      margin-top: 0;
+      margin-left: 0;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.section-title {
+  font-size: var(--font-size--700);
+  line-height: 1em;
+  color: var(--color--primary);
+  text-transform: uppercase;
+  text-shadow: var(--drop-shadow--primary-700);
+  @media (max-width: 1024px) {
+    font-size: var(--font-size--600);
+  }
+  @media (max-width: 640px) {
+    font-size: var(--font-size--500);
+  }
+}

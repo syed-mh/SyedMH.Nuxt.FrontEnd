@@ -1,0 +1,11 @@
+.color {
+  &--primary {
+    color: var(--color--primary);
+  }
+  &--secondary {
+    color: var(--color--secondary);
+  }
+  &--contrast {
+    color: var(--color--contrast);
+  }
+}

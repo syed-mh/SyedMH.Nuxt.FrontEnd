@@ -1,0 +1,28 @@
+.primary-button {
+  text-transform: lowercase;
+  font-size: var(--font-size--400);
+  position: relative;
+  color: var(--color--secondary);
+  max-width: max-content;
+  padding: 0 0.5em;
+  letter-spacing: 0.5px;
+  text-shadow: var(--drop-shadow--secondary);
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -0.3rem;
+    left: 0;
+    height: 0.3rem;
+    width: 25%;
+    border-radius: var(--border-radius--400);
+    background-color: var(--color--primary);
+    transition: width var(--transition--250);
+  }
+  &:hover,
+  &:focus-visible {
+    color: var(--color--secondary);
+    &::after {
+      width: 75%;
+    }
+  }
+}

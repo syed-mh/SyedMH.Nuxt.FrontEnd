@@ -1,0 +1,55 @@
+// IMPORT FONTS
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
+
+// GENERIC COMPONENT CLASSES
+@import './components/';
+
+// UTILITIES
+@import './utilities/';
+
+// GENERAL STYLING
+* {
+  scroll-behavior: smooth;
+  scrollbar-color: var(--color--primary) var(--color--background);
+  scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: var(--color--background);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color--primary);
+  border-radius: var(--border-radius--400);
+}
+section {
+  width: 100%;
+}
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight--light);
+  color: var(--color--contrast);
+  background-color: var(--color--background);
+  background-image: url('@/assets/images/background-texture.png');
+  background-attachment: fixed;
+}
+main {
+  gap: 2.5rem;
+  @media (max-width: 840px) {
+    gap: 5rem;
+  }
+  margin: 0 auto;
+}
+.app-content {
+  display: grid;
+  gap: 1.5rem;
+}
+a {
+  text-decoration: none;
+  color: var(--color--contrast);
+  transition: color var(--transition--250);
+  &:hover,
+  &:focus-visible {
+    color: var(--color--primary);
+  }
+}

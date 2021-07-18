@@ -1,0 +1,25 @@
+.glowing-border {
+  &--top,
+  &--bottom {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      border-radius: var(--border-radius--400);
+      height: 0.3rem;
+      background-color: var(--color--primary);
+      box-shadow: var(--drop-shadow--primary-700);
+    }
+  }
+  &--top {
+    &::after {
+      top: 0;
+    }
+  }
+  &--bottom {
+    &::after {
+      bottom: 0;
+    }
+  }
+}

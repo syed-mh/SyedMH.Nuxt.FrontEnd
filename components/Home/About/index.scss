@@ -1,0 +1,19 @@
+section {
+  gap: 1rem;
+  p {
+    max-width: 840px;
+    margin-top: 0;
+    margin-bottom: 0;
+    @media (min-width: 841px) {
+      font-size: 1.2rem;
+    }
+  }
+  &,
+  p,
+  .primary-button {
+    @media (max-width: 840px) {
+      text-align: left;
+      margin-left: 0;
+    }
+  }
+}

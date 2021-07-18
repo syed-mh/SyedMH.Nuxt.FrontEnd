@@ -1,0 +1,24 @@
+.shadow {
+  box-shadow: var(--drop-shadow--dark);
+  &--primary {
+    box-shadow: var(--drop-shadow--primary-500);
+  }
+  &--secondary {
+    box-shadow: var(--drop-shadow--secondary);
+  }
+  &--contrast {
+    box-shadow: var(--drop-shadow--contrast);
+  }
+}
+.text-shadow {
+  text-shadow: var(--drop-shadow--dark);
+  &--primary {
+    text-shadow: var(--drop-shadow--primary-500);
+  }
+  &--secondary {
+    text-shadow: var(--drop-shadow--secondary);
+  }
+  &--contrast {
+    text-shadow: var(--drop-shadow--contrast);
+  }
+}
