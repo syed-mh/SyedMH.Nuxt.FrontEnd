@@ -13,7 +13,7 @@
             <font-awesome-icon :icon="['fas', 'external-link-alt']" />
           </span>
           <span>
-            <nuxt-link :to="url">{{ url }}</nuxt-link>
+            <a :href="url">{{ url }}</a>
           </span>
         </li>
         <li v-if="repo" class="flex">
@@ -21,7 +21,7 @@
             <font-awesome-icon :icon="['fab', 'github']" />
           </span>
           <span class="flex">
-            <nuxt-link :to="repo">{{ repo }}</nuxt-link>
+            <a :href="repo">{{ repo }}</a>
           </span>
         </li>
         <li class="flex">
