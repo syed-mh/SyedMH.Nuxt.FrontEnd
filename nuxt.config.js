@@ -36,12 +36,22 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/fontawesome',
     '@nuxtjs/dotenv',
+    '@nuxtjs/google-fonts',
   ],
 
   fontawesome: {
     icons: {
       solid: true,
       brands: true,
+    },
+  },
+
+  googleFonts: {
+    display: 'swap',
+    preload: true,
+    useStylesheet: false,
+    families: {
+      Manrope: [400, 800],
     },
   },
 

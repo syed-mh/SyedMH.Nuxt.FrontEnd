@@ -1,6 +1,3 @@
-// IMPORT FONTS
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
-
 // GENERIC COMPONENT CLASSES
 @import './components/';
 
@@ -14,8 +11,8 @@
   scrollbar-width: thin;
 }
 ::-webkit-scrollbar {
-  width: 0.8rem;
-  height: 0.8rem;
+  width: 0.5rem;
+  height: 0.5rem;
   background-color: var(--color--background);
 }
 ::-webkit-scrollbar-thumb {

@@ -1,0 +1,14 @@
+.secondary-button {
+  padding: 0.15em 0.25em;
+  background-color: var(--color--secondary);
+  color: var(--color--background);
+  font-weight: var(--font-weight--bold);
+  font-size: var(--font-size--200);
+  border-radius: var(--border-radius--300);
+  transition: background-color var(--transition--250);
+  &:hover,
+  &:focus-visible {
+    color: var(--color--background);
+    background-color: var(--color--contrast);
+  }
+}

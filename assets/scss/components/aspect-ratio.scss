@@ -16,6 +16,9 @@ figure {
   &[aspect-ratio='16x9'] {
     padding-top: calc(100% / 16 * 9);
   }
+  &[aspect-ratio='8x3'] {
+    padding-top: calc(100% / 8 * 3);
+  }
   &[aspect-ratio='4x3'] {
     padding-top: calc(100% / 4 * 3);
   }

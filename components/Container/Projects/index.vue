@@ -13,7 +13,7 @@
         >{{ project.project_category.name }}</nuxt-link
       >
       <h3>
-        <nuxt-link to="`/project/${project.slug}`" class="flex">
+        <nuxt-link :to="`/project/${project.slug}`" class="flex">
           {{ project.title }}
           <font-awesome-icon :icon="['fas', 'folder-open']" />
         </nuxt-link>

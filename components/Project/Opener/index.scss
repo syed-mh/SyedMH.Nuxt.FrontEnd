@@ -1,0 +1,14 @@
+div {
+  position: relative;
+  margin-top: -1.5rem;
+}
+span {
+  position: absolute;
+  z-index: 2;
+  bottom: 1rem;
+  left: 1rem;
+  padding: 0.25em 0.5em;
+  font-size: var(--font-size--300);
+  background-color: var(--color--background);
+  color: var(--color--secondary);
+}

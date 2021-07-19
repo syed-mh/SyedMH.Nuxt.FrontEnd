@@ -1,6 +1,6 @@
 <template>
   <main class="grid boxed">
-    <home-page-opener
+    <home-opener
       :title="featured.title"
       :slug="featured.slug"
       :category="featured.project_category.name"
@@ -25,7 +25,7 @@ export default {
     const _featured = await fetch(
       `${process.env.API_BASE_URL}/projects?highlight=true&_limit=1`
     ).then((_response) => _response.json())
-    this.about = await fetch('https://strapi.syedmh.com/home-about').then(
+    this.about = await fetch(`${process.env.API_BASE_URL}/home-about`).then(
       (_response) => _response.json()
     )
     const _recentProjects = await fetch(
