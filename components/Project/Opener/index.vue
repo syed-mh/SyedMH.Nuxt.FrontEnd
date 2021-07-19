@@ -1,7 +1,12 @@
 <template>
   <div>
     <figure aspect-ratio="8x3" class="rounded shadow filter">
-      <img :src="`${$config.API_BASE_URL}/${image}`" :alt="alt" />
+      <img
+        :srcset="`${$config.API_BASE_URL}/${image.small.url} 330w, ${$config.API_BASE_URL}/${image.medium.url} 500w`"
+        sizes="330px, 500px"
+        :src="`${$config.API_BASE_URL}/${image.large.url}`"
+        :alt="alt"
+      />
     </figure>
     <span class="rounded">
       {{ credit }}
@@ -12,7 +17,7 @@
 export default {
   props: {
     image: {
-      type: String,
+      type: Array,
       required: true,
     },
     alt: {

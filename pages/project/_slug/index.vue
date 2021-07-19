@@ -2,7 +2,7 @@
   <main class="grid boxed">
     <page-title :title="project.title" />
     <project-opener
-      :image="project.featuredImage.formats.large.url"
+      :image="project.featuredImage.formats"
       :credit="project.photoCredit"
       :alt="project.title"
     />
