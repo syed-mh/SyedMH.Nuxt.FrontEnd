@@ -5,7 +5,7 @@
       :slug="featured.slug"
       :category="featured.project_category.name"
       :category-slug="featured.project_category.slug"
-      :image="featured.featuredImage.formats.large.url"
+      :image="featured.featuredImage.formats"
     />
     <home-about :title="about.designation" :content="about.content" />
     <home-recent-projects :projects="recentProjects" />
@@ -36,3 +36,4 @@ export default {
   },
 }
 </script>
+<style lang="scss" scoped src="./index.scss" />

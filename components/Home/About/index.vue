@@ -1,12 +1,12 @@
 <template>
-  <section class="home-about grid center">
+  <section class="home-about grid">
     <h1 class="section-title">
       {{ title }}
     </h1>
-    <p class="center">
+    <p>
       {{ content }}
     </p>
-    <nuxt-link to="/about" class="primary-button center">About Me</nuxt-link>
+    <nuxt-link to="/about" class="primary-button">About Me</nuxt-link>
   </section>
 </template>
 <script>

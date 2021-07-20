@@ -1,5 +1,11 @@
 section {
   gap: 1rem;
+  @media (min-width: 1025px) {
+    margin-top: -5.5rem;
+    position: relative;
+    z-index: 2;
+    padding: 0 1rem;
+  }
   p {
     max-width: 840px;
     margin-top: 0;

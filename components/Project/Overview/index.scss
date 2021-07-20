@@ -3,8 +3,9 @@ section {
   @media (min-width: 960px) {
     grid-template-columns: 1fr 1fr;
   }
-  & > div:nth-child(1) {
+  & > div:first-child {
     gap: 1rem;
+    place-items: baseline;
     p {
       margin: 0;
     }

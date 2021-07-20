@@ -1,7 +1,11 @@
 <template lang="eng">
   <section class="grid">
     <figure aspect-ratio="16x9" class="rounded shadow filter">
-      <img :src="`${$config.API_BASE_URL}/${image}`" :alt="title" width="16" height="9" />
+      <img
+        :srcset="`${$config.API_BASE_URL}/${image.thumbnail.url} ${image.thumbnail.width}w, ${$config.API_BASE_URL}/${image.small.url} ${image.small.width}w, ${$config.API_BASE_URL}/${image.medium.url} ${image.medium.width}w, ${$config.API_BASE_URL}/${image.large.url} ${image.large.width}w`"
+        :src="`${$config.API_BASE_URL}/${image.large.url}`"
+        :alt="title"
+      />
     </figure>
     <div class="flex">
       <nuxt-link class="category" :to="`/project-category/${categorySlug}`">{{ category }}::</nuxt-link>
@@ -18,7 +22,7 @@ export default {
     slug: { type: String, required: true },
     category: { type: String, required: true },
     categorySlug: { type: String, required: true },
-    image: { type: String, required: true },
+    image: { type: Array, required: true },
   },
 }
 </script>
