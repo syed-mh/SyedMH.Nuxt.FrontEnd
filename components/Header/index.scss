@@ -36,8 +36,6 @@ header {
     padding: 1rem 0;
     & > a {
       margin-right: auto;
-      position: relative;
-      z-index: 11;
     }
   }
   ul {
@@ -55,10 +53,8 @@ header {
       z-index: 10;
       top: 0;
       right: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('@/assets/images/background-texture.png');
-      background-repeat: repeat-x;
+      width: 100vw;
+      height: 100vh;
       backdrop-filter: blur(1rem) brightness(0.3) contrast(0.95);
       transition: right var(--transition--250);
       gap: 0.3rem;

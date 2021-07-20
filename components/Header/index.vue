@@ -2,19 +2,20 @@
   <header>
     <div class="boxed flex glowing-border--bottom">
       <logo />
-      <button type="button" class="menu-opener" @click="toggleMenu">
+      <button
+        ref="button"
+        type="button"
+        class="menu-opener"
+        @click="handleMenuToggle"
+      >
         <font-awesome-icon :icon="['fas', 'bars']" />
         <font-awesome-icon :icon="['fas', 'times']" />
       </button>
-      <ul class="flex">
-        <li>
-          <nuxt-link to="/" exact>Home</nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/projects">Projects</nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/about">About</nuxt-link>
+      <ul ref="menu" class="flex" @click="handleMenuToggle">
+        <li v-for="menuItem in menuItems" :key="menuItem.name">
+          <nuxt-link :to="menuItem.to" @click="handleMenuToggle">{{
+            menuItem.name
+          }}</nuxt-link>
         </li>
       </ul>
     </div>
@@ -22,10 +23,28 @@
 </template>
 <script>
 export default {
+  data() {
+    return {
+      menuItems: [
+        {
+          to: '/',
+          name: 'Home',
+        },
+        {
+          to: '/projects',
+          name: 'Projects',
+        },
+        {
+          to: '/about',
+          name: 'About',
+        },
+      ],
+    }
+  },
   methods: {
-    toggleMenu(event) {
-      event.target.classList.toggle('active')
-      event.target.nextElementSibling.classList.toggle('active')
+    handleMenuToggle() {
+      this.$refs.button.classList.toggle('active')
+      this.$refs.menu.classList.toggle('active')
     },
   },
 }
