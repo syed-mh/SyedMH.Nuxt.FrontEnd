@@ -52,7 +52,7 @@
             <a
               v-for="technology in technologies"
               :key="technology.slug"
-              :href="`/projects/technology/${technology.slug}`"
+              :href="`/projects/technologies/${technology.slug}`"
               class="secondary-button"
             >
               {{ technology.name }}

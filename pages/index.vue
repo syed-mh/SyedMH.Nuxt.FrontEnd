@@ -22,17 +22,39 @@ export default {
     }
   },
   async fetch() {
-    const _featured = await fetch(
-      `${process.env.API_BASE_URL}/projects?highlight=true&_limit=1`
-    ).then((_response) => _response.json())
-    this.about = await fetch(`${process.env.API_BASE_URL}/home-about`).then(
-      (_response) => _response.json()
-    )
-    const _recentProjects = await fetch(
-      `${process.env.API_BASE_URL}/projects?highlight=false&_sort=published_at:DESC&_limit=3`
-    ).then((_response) => _response.json())
-    this.featured = _featured[0]
-    this.recentProjects = _recentProjects.slice(0, 3)
+    /**
+     * A collection of endpoints to fetch data from
+     * @const { string[] } _endpoints
+     */
+    const _endpoints = [
+      'projects?highlight=true&_limit=1',
+      'home-about',
+      'projects?highlight=false&_sort=date:DESC&_limit=3',
+    ]
+
+    /**
+     * A collection of JSON responses from all of the endpoints
+     * @const { Object[] } _responses
+     */
+    const _responses = []
+
+    for (const _endpoint of _endpoints) {
+      /**
+       * API response from current endpoint
+       * @const { Object|Object[] } _response
+       */
+      const _response = await fetch(
+        `${process.env.API_BASE_URL}/${_endpoint}`
+      ).then((_raw) => _raw.json())
+      _responses.push(_response)
+    }
+
+    /**
+     * Append responses to component state
+     */
+    this.featured = _responses[0][0]
+    this.about = _responses[1]
+    this.recentProjects = _responses[2]
   },
 }
 </script>

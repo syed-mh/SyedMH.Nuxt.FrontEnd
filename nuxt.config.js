@@ -56,8 +56,8 @@ export default {
   },
 
   loading: {
-    color: 'blue',
-    height: '5px',
+    color: '#ffa90a',
+    height: '4px',
   },
 
   serverMiddleware: ['@/middleware/redirects.js'],

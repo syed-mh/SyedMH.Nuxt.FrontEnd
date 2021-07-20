@@ -1,5 +1,12 @@
 <template>
-  <container-projects :projects="projects" />
+  <div>
+  <container-projects v-if="projects.length" :projects="projects" />
+  <div v-else class="center">
+    <h2 class="section-title--small">No Results Found</h2>
+    <nuxt-link to="/projects" class="primary-button center">
+      View all Projects
+    </nuxt-link>
+  </div>
 </template>
 <script>
 export default {
@@ -10,12 +17,21 @@ export default {
     }
   },
   async fetch() {
+    /**
+     * Dynamic endpoint to fetch projects from
+     * @var { string } _projectsEndpoint
+     */
+    const _projectsEndpoint = `projects?_sort=date:DESC`
+
+    /**
+     * Array of projects returned from API
+     * @const { Object[] } _projects
+     */
     const _projects = await fetch(
-      `${process.env.API_BASE_URL}/projects?_sort=published_at:DESC`
-    ).then((_response) => _response.json())
+      `${process.env.API_BASE_URL}/${_projectsEndpoint}`
+    ).then((_raw) => _raw.json())
 
     this.projects = _projects
   },
 }
 </script>
-<style lang="scss" scoped src="./index.scss" />

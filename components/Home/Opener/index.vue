@@ -8,7 +8,7 @@
       />
     </figure>
     <div class="flex">
-      <nuxt-link class="category" :to="`/project-category/${categorySlug}`">{{ category }}::</nuxt-link>
+      <nuxt-link class="category" :to="`/projects/project_category/${categorySlug}`">{{ category }}::</nuxt-link>
       <nuxt-link class="title" :to="`/project/${slug}`">{{ title }}</nuxt-link>
       <nuxt-link class="primary-button" :to="`/project/${slug}`">Explore</nuxt-link>
     </div>

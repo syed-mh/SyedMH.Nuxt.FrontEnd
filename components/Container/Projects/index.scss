@@ -11,49 +11,4 @@ div {
       padding-top: 50%;
     }
   }
-  article {
-    width: 100%;
-    flex-direction: column;
-    figure {
-      z-index: 1;
-    }
-    & > a,
-    & > h3 {
-      padding: 0 0.5ch;
-    }
-    & > a {
-      position: relative;
-      z-index: 2;
-      font-size: 1.2rem;
-      text-transform: lowercase;
-      color: var(--color--primary);
-      text-shadow: var(--drop-shadow--primary-300);
-      margin-top: -1.5ch;
-      transition: text-shadow var(--transition--250);
-      &:hover,
-      &:focus-visible {
-        text-shadow: var(--drop-shadow--primary-500);
-      }
-    }
-    .flex {
-      align-items: center;
-      text-transform: uppercase;
-      font-size: var(--font-size--400);
-      &:hover,
-      &:focus-visible {
-        color: var(--color--secondary);
-        svg {
-          left: -0.5ch;
-        }
-      }
-      svg {
-        color: var(--color--secondary);
-        text-shadow: var(--drop-shadow-secondary);
-        margin-left: auto;
-        position: relative;
-        left: 0;
-        transition: left var(--transition--250);
-      }
-    }
-  }
 }
