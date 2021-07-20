@@ -95,10 +95,20 @@ export default {
        * JSON response from current endpoint
        * @const { Object } _response
        */
-      const _response = await fetch(
+      let _response = await fetch(
         `${process.env.API_BASE_URL}/${_endpoint}`
       ).then((_raw) => _raw.json())
-      _responses.push(_sortTaxonomiesByCount(_response))
+      _response = _sortTaxonomiesByCount(_response)
+      _response = _response.map((_responseItem) => {
+        return {
+          name: _responseItem.name,
+          slug: _responseItem.slug,
+          projects: {
+            length: _responseItem.projects.length,
+          },
+        }
+      })
+      _responses.push(_response)
     }
 
     // /**
