@@ -16,7 +16,7 @@
 export default {
   props: {
     image: {
-      type: Array,
+      type: Object,
       required: true,
     },
     alt: {

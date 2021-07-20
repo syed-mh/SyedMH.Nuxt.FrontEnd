@@ -1,0 +1,32 @@
+aside {
+  @media (min-width: 961px) {
+    button {
+      display: none;
+    }
+  }
+  button {
+    width: 100%;
+    border: 1px solid currentColor;
+    color: var(--color--primary);
+    text-align: center;
+    font-weight: var(--font-weight--bold);
+    background-color: transparent;
+    padding: 0.5em 0;
+    transition: margin var(--transition--500), color var(--transition--250),
+      background-color var(--transition--250), box-shadow var(--transition--250);
+    &.active {
+      margin-bottom: 1rem;
+      background-color: var(--color--primary);
+      color: var(--color--background);
+      box-shadow: var(--drop-shadow--primary-500);
+    }
+  }
+  & > div {
+    gap: 1rem;
+    @media (max-width: 960px) {
+      height: 0;
+      transition: height var(--transition--500);
+      overflow: hidden;
+    }
+  }
+}

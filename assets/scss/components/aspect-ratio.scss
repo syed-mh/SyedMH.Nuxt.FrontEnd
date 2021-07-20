@@ -18,6 +18,12 @@ figure {
   }
   &[aspect-ratio='8x3'] {
     padding-top: calc(100% / 8 * 3);
+    @media (max-width: 768px) {
+      padding-top: calc(100% / 8 * 4);
+    }
+    @media (max-width: 480px) {
+      padding-top: calc(100% / 8 * 5);
+    }
   }
   &[aspect-ratio='4x3'] {
     padding-top: calc(100% / 4 * 3);

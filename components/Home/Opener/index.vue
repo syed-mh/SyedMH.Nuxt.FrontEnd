@@ -22,7 +22,7 @@ export default {
     slug: { type: String, required: true },
     category: { type: String, required: true },
     categorySlug: { type: String, required: true },
-    image: { type: Array, required: true },
+    image: { type: Object, required: true },
   },
 }
 </script>

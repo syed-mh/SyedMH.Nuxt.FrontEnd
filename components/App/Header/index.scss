@@ -16,6 +16,10 @@ header {
     border: none;
     color: var(--color--primary);
     font-size: 1.5rem;
+    transition: color var(--transition--250);
+    &:focus-visible {
+      color: var(--color--secondary);
+    }
     &::after {
       content: '';
       position: absolute;
@@ -52,14 +56,15 @@ header {
       box-sizing: border-box;
       z-index: 10;
       top: 0;
-      right: 0;
+      right: -100%;
       width: 100vw;
       height: 100vh;
       backdrop-filter: blur(1rem) brightness(0.3) contrast(0.95);
       transition: right var(--transition--250);
       gap: 0.3rem;
-      &:not(.active) {
-        right: -100%;
+      &.active,
+      &:focus-within {
+        right: 0;
       }
     }
     z-index: 10;

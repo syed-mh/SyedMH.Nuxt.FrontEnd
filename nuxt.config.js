@@ -55,6 +55,13 @@ export default {
     },
   },
 
+  loading: {
+    color: 'blue',
+    height: '5px',
+  },
+
+  serverMiddleware: ['@/middleware/redirects.js'],
+
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [],
 
