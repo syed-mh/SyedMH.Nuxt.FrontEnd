@@ -41,8 +41,8 @@ export default {
 
   fontawesome: {
     icons: {
-      solid: true,
-      brands: true,
+      solid: ['faBars', 'faTimes', 'faFolderOpen', 'faExternalLinkAlt'],
+      brands: ['faGithub'],
     },
   },
 

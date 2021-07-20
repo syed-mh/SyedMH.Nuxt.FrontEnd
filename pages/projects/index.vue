@@ -1,11 +1,12 @@
 <template>
   <div>
-  <container-projects v-if="projects.length" :projects="projects" />
-  <div v-else class="center">
-    <h2 class="section-title--small">No Results Found</h2>
-    <nuxt-link to="/projects" class="primary-button center">
-      View all Projects
-    </nuxt-link>
+    <container-projects v-if="projects.length" :projects="projects" />
+    <div v-else class="center">
+      <h2 class="section-title--small">No Results Found</h2>
+      <nuxt-link to="/projects" class="primary-button center">
+        View all Projects
+      </nuxt-link>
+    </div>
   </div>
 </template>
 <script>
@@ -31,38 +32,38 @@ export default {
       `${process.env.API_BASE_URL}/${_projectsEndpoint}`
     ).then((_raw) => _raw.json())
 
-    this.projects = _projects.map(_project => {
+    this.projects = _projects.map((_project) => {
       return {
         id: _project.id,
         title: _project.title,
         slug: _project.slug,
         project_type: {
           name: _project.project_type.name,
-          slug: _project.project_type.slug
+          slug: _project.project_type.slug,
         },
         project_category: {
           name: _project.project_category.name,
-          slug: _project.project_category.slug
+          slug: _project.project_category.slug,
         },
         featuredImage: {
           formats: {
             thumbnail: {
               width: _project.featuredImage.formats.thumbnail.width,
-              url: _project.featuredImage.formats.thumbnail.url
+              url: _project.featuredImage.formats.thumbnail.url,
             },
             large: {
               width: _project.featuredImage.formats.large.width,
-              url: _project.featuredImage.formats.large.url
+              url: _project.featuredImage.formats.large.url,
             },
             medium: {
               width: _project.featuredImage.formats.medium.width,
-              url: _project.featuredImage.formats.medium.url
+              url: _project.featuredImage.formats.medium.url,
             },
             small: {
               width: _project.featuredImage.formats.small.width,
-              url: _project.featuredImage.formats.small.url
+              url: _project.featuredImage.formats.small.url,
             },
-          }
+          },
         },
       }
     })
