@@ -37,7 +37,15 @@ export default {
     '@nuxtjs/fontawesome',
     '@nuxtjs/dotenv',
     '@nuxtjs/google-fonts',
+    '@nuxtjs/markdownit',
   ],
+
+  markdownit: {
+    runtime: true,
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+  },
 
   fontawesome: {
     icons: {
