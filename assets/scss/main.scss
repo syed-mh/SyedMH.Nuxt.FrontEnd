@@ -22,11 +22,14 @@
 section {
   width: 100%;
 }
+html,
+body {
+  background-color: var(--color--background);
+}
 body {
   font-family: var(--font-family);
   font-weight: var(--font-weight--light);
   color: var(--color--contrast);
-  background-color: var(--color--background);
   background-image: url('@/assets/images/background-texture.png');
   background-attachment: fixed;
 }
