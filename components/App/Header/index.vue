@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="boxed flex glowing-border--bottom">
+    <nav class="boxed flex glowing-border--bottom">
       <app-logo />
       <button
         ref="button"
@@ -15,10 +15,12 @@
       <ul
         ref="menu"
         class="flex"
+        role="menu"
+        tabindex="0"
         @click="handleMenuToggle"
         @keypress="handleMenuToggle"
       >
-        <li v-for="menuItem in menuItems" :key="menuItem.name">
+        <li v-for="menuItem in menuItems" :key="menuItem.name" role="menuitem">
           <nuxt-link
             :to="menuItem.to"
             :exact="menuItem.exact"
@@ -27,7 +29,7 @@
           >
         </li>
       </ul>
-    </div>
+    </nav>
   </header>
 </template>
 <script>
