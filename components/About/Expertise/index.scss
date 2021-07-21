@@ -2,7 +2,7 @@ section {
   gap: 2rem;
 }
 ul {
-  &:not(ul ul) {
+  &:not(li > ul) {
     padding: 0;
     margin: 0;
     columns: 3;
