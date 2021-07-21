@@ -1,7 +1,7 @@
 <template>
   <section class="grid center">
     <h2 class="section-title">Recent Projects</h2>
-    <container-projects :projects="projects" leading="lazy" />
+    <container-projects :projects="projects" loading="lazy" />
     <nuxt-link class="primary-button center" to="/projects">View All</nuxt-link>
   </section>
 </template>

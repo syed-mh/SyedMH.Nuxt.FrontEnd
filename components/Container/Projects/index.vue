@@ -19,7 +19,7 @@ export default {
       type: Array,
       required: true,
     },
-    loeading: {
+    loading: {
       type: [String, Boolean],
       default: false,
     },
