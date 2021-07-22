@@ -4,6 +4,7 @@
       <app-logo />
       <button
         ref="button"
+        name="menu"
         type="button"
         class="menu-opener"
         @click="handleMenuToggle"
