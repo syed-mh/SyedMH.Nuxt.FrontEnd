@@ -4,7 +4,7 @@
       <app-logo />
       <button
         ref="button"
-        name="menu"
+        aria-label="Site Menu"
         type="button"
         class="menu-opener"
         @click="handleMenuToggle"
