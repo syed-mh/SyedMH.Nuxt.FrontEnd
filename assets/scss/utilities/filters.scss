@@ -1,5 +1,6 @@
 .filter {
   position: relative;
+  isolation: isolate;
   &::before,
   &::after {
     content: '';
